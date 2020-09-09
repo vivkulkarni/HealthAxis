@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21107</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9C08EF53-A56F-44B0-8266-CCC6CD04E272}</ProjectGuid>
+    <ProjectTypeGuids>{EF7E3281-CD33-11D4-8326-00C04FA0CE8D};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>library</OutputType>
+    <GenericProcessing>true</GenericProcessing>
+    <RootNamespace>BTAHL7Schemas</RootNamespace>
+    <AssemblyName>BTAHL7 Project1</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <BpelCompliance>True</BpelCompliance>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>btahl7.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.BizTalk.Pipeline.Components, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Solutions.BTAHL7.HL7Schemas, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft BizTalk 2016 Accelerator for HL7\Bin\Microsoft.Solutions.BTAHL7.HL7Schemas.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Name>System.Configuration</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.Pipeline">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.DefaultPipelines">
+      <Name>Microsoft.BizTalk.DefaultPipelines</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.GlobalPropertySchemas">
+      <Name>Microsoft.BizTalk.GlobalPropertySchemas</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.TestTools">
+      <Name>Microsoft.BizTalk.TestTools</Name>
+    </Reference>
+    <Reference Include="Microsoft.XLANGs.BaseTypes">
+      <Name>Microsoft.XLANGs.BaseTypes</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="PatientIdReq.xsd">
+      <TypeName>PatientIdReq</TypeName>
+      <Namespace>BTAHL7Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="fhir-xhtml.xsd">
+      <TypeName>fhir_xhtml</TypeName>
+      <Namespace>BTAHL7Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="bundle.xsd">
+      <TypeName>bundle</TypeName>
+      <Namespace>BTAHL7Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="xml.xsd">
+      <TypeName>xml</TypeName>
+      <Namespace>BTAHL7Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="fhir-base.xsd">
+      <TypeName>fhir_base</TypeName>
+      <Namespace>BTAHL7Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="patient.xsd">
+      <TypeName>patient</TypeName>
+      <Namespace>BTAHL7Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <Schema Include="ADT_A04_251_GLO_DEF.xsd">
+      <TypeName>ADT_A04_251_GLO_DEF</TypeName>
+      <Namespace>BTAHL7Schemas</Namespace>
+      <SubType>Task</SubType>
+    </Schema>
+    <None Include="btahl7.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BTAHL7V24Common Project1\BTAHL7V24Common Project1.btproj">
+      <Project>{a66b1cbf-dda6-425b-be36-be45d98217b4}</Project>
+      <Name>BTAHL7V24Common Project1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BTAHL7V251Common Project1\BTAHL7V251Common Project1.btproj">
+      <Project>{4a772bdd-62fa-4765-82ef-49d232617ad2}</Project>
+      <Name>BTAHL7V251Common Project1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BTAHL7V2XCommon Project1\BTAHL7V2XCommon Project1.btproj">
+      <Project>{d9b5d739-0998-4504-b2c2-20ae07489938}</Project>
+      <Name>BTAHL7V2XCommon Project1</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="BizTalk Orchestration1.odx">
+      <TypeName>BizTalk_Orchestration1</TypeName>
+      <Namespace>BTAHL7Schemas</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="BizTalk Orchestration2.odx">
+      <TypeName>BizTalk_Orchestration2</TypeName>
+      <Namespace>BTAHL7Schemas</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="PatientOrch.odx">
+      <TypeName>PatientOrch</TypeName>
+      <Namespace>BTAHL7Schemas</Namespace>
+      <SubType>Task</SubType>
+    </XLang>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />
+</Project>

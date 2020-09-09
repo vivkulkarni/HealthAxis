@@ -1,0 +1,313 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="2fc2018f-d34b-47fd-9e0a-e0984c8d3c32" LowerBound="1.1" HigherBound="110.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="BTAHL7Schemas" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="MultipartMessageType" OID="fd7e731a-9089-418c-8c6f-da2f22b7aaf8" ParentLink="Module_MessageType" LowerBound="4.1" HigherBound="10.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ORUMultiPart24" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="f590a3e2-ae71-4c7f-aebc-12c111ac923b" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="6.1" HigherBound="7.1">
+                <om:Property Name="ClassName" Value="BTAHL7Schemas.ADT_A04_251_GLO_DEF" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="BodySegments" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="PartDeclaration" OID="e7202eef-8771-45e4-bfe0-a24d07a9aad6" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="7.1" HigherBound="8.1">
+                <om:Property Name="ClassName" Value="BTAHL7Schemas.MSH_25_GLO_DEF" />
+                <om:Property Name="IsBodyPart" Value="False" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MSHSegment" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="PartDeclaration" OID="c5e5a242-437d-4e3a-ad1a-7636958cbbb3" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="8.1" HigherBound="9.1">
+                <om:Property Name="ClassName" Value="System.String" />
+                <om:Property Name="IsBodyPart" Value="False" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ZSegments" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="c32701bf-1afe-48f8-907a-b8d6342464b1" ParentLink="Module_PortType" LowerBound="10.1" HigherBound="17.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_1" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="c122c2c9-5168-4b69-bf76-225a8a4cd08b" ParentLink="PortType_OperationDeclaration" LowerBound="12.1" HigherBound="16.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="a6f772cd-eb4a-4df2-8722-76e4b2a93628" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="14.13" HigherBound="14.32">
+                    <om:Property Name="Ref" Value="BTAHL7Schemas.ADT_A04_251_GLO_DEF" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="6ce56eb6-b934-424d-ab0d-762174da45d9" ParentLink="Module_PortType" LowerBound="17.1" HigherBound="24.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_2" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="50a8e05f-b18f-4b96-9d43-9dab645a069d" ParentLink="PortType_OperationDeclaration" LowerBound="19.1" HigherBound="23.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="f7f707af-1616-41ce-b9b7-d7ea16e4992d" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="21.13" HigherBound="21.27">
+                    <om:Property Name="Ref" Value="BTAHL7Schemas.ORUMultiPart24" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="4bf6aa56-f621-4e1b-90e9-919c4edf2ca9" ParentLink="Module_PortType" LowerBound="24.1" HigherBound="31.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_3" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="66219483-c1fb-4043-9460-e50406286bf1" ParentLink="PortType_OperationDeclaration" LowerBound="26.1" HigherBound="30.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="4b95a4ea-87a2-441a-ada2-7fda94ace86a" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="28.13" HigherBound="28.32">
+                    <om:Property Name="Ref" Value="BTAHL7Schemas.ADT_A04_251_GLO_DEF" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="de8e72e2-2065-47ff-85ba-ca510e0b6f51" ParentLink="Module_ServiceDeclaration" LowerBound="31.1" HigherBound="109.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="BizTalk_Orchestration1" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="a3cb53ed-c22f-48a4-8c1d-c9e213a089ac" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="40.1" HigherBound="41.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="str" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="bc0ef352-1964-4ee8-b71a-4c2f6eeafcf9" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="41.1" HigherBound="42.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="xmldoc" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="3cebb03e-7541-43bc-953e-1c036ecf07bd" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="38.1" HigherBound="39.1">
+                <om:Property Name="Type" Value="BTAHL7Schemas.ADT_A04_251_GLO_DEF" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Message_251" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="cb457468-c953-4a0e-a921-7ca1cd807aac" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="39.1" HigherBound="40.1">
+                <om:Property Name="Type" Value="BTAHL7Schemas.ORUMultiPart24" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="v251" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="5d7ffcf2-534b-4c2d-8760-f8e9a6559e58" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="0ab9d403-07c8-4124-bd39-43eee65112e9" ParentLink="ServiceBody_Statement" LowerBound="44.1" HigherBound="48.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="Port_1" />
+                    <om:Property Name="MessageName" Value="Message_251" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_1" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="b116a499-1da5-4192-a669-c0c541d00555" ParentLink="ServiceBody_Statement" LowerBound="48.1" HigherBound="105.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructMessage_2" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageAssignment" OID="4eefbc8b-972b-4a49-9f09-9a03863bc9b5" ParentLink="ComplexStatement_Statement" LowerBound="51.1" HigherBound="104.1">
+                        <om:Property Name="Expression" Value="v251.BodySegments=Message_251;&#xD;&#xA;str = @&quot;&lt;ns0:MSH_25_GLO_DEF xmlns:ns0='http://microsoft.com/HealthCare/HL7/2X'&gt;&#xD;&#xA;	&lt;MSH&gt;&#xD;&#xA;		&lt;MSH.2_EncodingCharacters&gt;^~\&amp;amp;&lt;/MSH.2_EncodingCharacters&gt;&#xD;&#xA;		&lt;MSH.3_SendingApplication&gt;&#xD;&#xA;			&lt;HD.0_NamespaceId&gt;MyHealthCareCompany&lt;/HD.0_NamespaceId&gt;&#xD;&#xA;		&lt;/MSH.3_SendingApplication&gt;&#xD;&#xA;		&lt;MSH.4_SendingFacility&gt;&#xD;&#xA;			&lt;HD.0_NamespaceId&gt;MyHealthCareCompany&lt;/HD.0_NamespaceId&gt;&#xD;&#xA;			&lt;HD.1_UniversalId&gt;12&lt;/HD.1_UniversalId&gt;&#xD;&#xA;			&lt;HD.2_UniversalIdType&gt;L,M,N&lt;/HD.2_UniversalIdType&gt;&#xD;&#xA;		&lt;/MSH.4_SendingFacility&gt;&#xD;&#xA;		&lt;MSH.5_ReceivingApplication&gt;&#xD;&#xA;			&lt;HD.0_NamespaceId&gt;MyReceivingCompany&lt;/HD.0_NamespaceId&gt;&#xD;&#xA;		&lt;/MSH.5_ReceivingApplication&gt;&#xD;&#xA;		&lt;MSH.6_ReceivingFacility&gt;&#xD;&#xA;			&lt;HD.0_NamespaceId&gt;MyReceivingCompany&lt;/HD.0_NamespaceId&gt;&#xD;&#xA;		&lt;/MSH.6_ReceivingFacility&gt;&#xD;&#xA;		&lt;MSH.7_DateTimeOfMessage&gt;&#xD;&#xA;			&lt;TS.1&gt;20110217203656+0530&lt;/TS.1&gt;&#xD;&#xA;		&lt;/MSH.7_DateTimeOfMessage&gt;&#xD;&#xA;		&lt;MSH.9_MessageType&gt;&#xD;&#xA;			&lt;CM_MSG.0_MessageType&gt;ORU&lt;/CM_MSG.0_MessageType&gt;&#xD;&#xA;			&lt;CM_MSG.1_TriggerEvent&gt;R01&lt;/CM_MSG.1_TriggerEvent&gt;&#xD;&#xA;			&lt;CM_MSG.2_MessageStructure&gt;ORU_R01&lt;/CM_MSG.2_MessageStructure&gt;&#xD;&#xA;		&lt;/MSH.9_MessageType&gt;&#xD;&#xA;		&lt;MSH.10_MessageControlId&gt;19316405-a86e-4dfe-afff-542128d80bd6&lt;/MSH.10_MessageControlId&gt;&#xD;&#xA;		&lt;MSH.11_ProcessingId&gt;&#xD;&#xA;			&lt;PT.0_ProcessingId&gt;P&lt;/PT.0_ProcessingId&gt;&#xD;&#xA;			&lt;PT.1_ProcessingMode&gt;A&lt;/PT.1_ProcessingMode&gt;&#xD;&#xA;		&lt;/MSH.11_ProcessingId&gt;&#xD;&#xA;		&lt;MSH.12_VersionId&gt;&#xD;&#xA;			&lt;VID_0_VersionId&gt;2.4&lt;/VID_0_VersionId&gt;&#xD;&#xA;		&lt;/MSH.12_VersionId&gt;&#xD;&#xA;		&lt;MSH.13_SequenceNumber&gt;1&lt;/MSH.13_SequenceNumber&gt;&#xD;&#xA;		&lt;MSH.15_AcceptAcknowledgmentType&gt;AL&lt;/MSH.15_AcceptAcknowledgmentType&gt;&#xD;&#xA;		&lt;MSH.21_ConformanceStatementId&gt;&#xD;&#xA;			&lt;EI_0_EntityIdentifier&gt;AA&lt;/EI_0_EntityIdentifier&gt;&#xD;&#xA;		&lt;/MSH.21_ConformanceStatementId&gt;&#xD;&#xA;	&lt;/MSH&gt;&#xD;&#xA;&lt;/ns0:MSH_25_GLO_DEF&gt;&quot;;&#xD;&#xA;&#xD;&#xA;xmldoc.LoadXml(str);&#xD;&#xA;v251.MSHSegment = xmldoc;&#xD;&#xA;v251.ZSegments=&quot;&quot;;&#xD;&#xA;v251(BTAHL7Schemas.MessageClass) = &quot;MessageClass2X&quot;;&#xD;&#xA;&#xD;&#xA;v251(BTAHL7Schemas.ParseError) = false;&#xD;&#xA;v251(BTAHL7Schemas.SegmentDelimiter2Char) = true;&#xD;&#xA;v251(BTAHL7Schemas.ZPartPresent) = false;&#xD;&#xA;v251(BTAHL7Schemas.MessageClass) = &quot;MessageClass2X&quot;;&#xD;&#xA;v251(BTAHL7Schemas.MessageEncoding) = 65001;" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="MessageAssignment_1" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="cf594fd1-3eee-45a3-b2aa-509fafaaeaf0" ParentLink="Construct_MessageRef" LowerBound="49.23" HigherBound="49.27">
+                        <om:Property Name="Ref" Value="v251" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="cc326ac5-e246-4c0b-bb0b-07534df084fc" ParentLink="ServiceBody_Statement" LowerBound="105.1" HigherBound="107.1">
+                    <om:Property Name="PortName" Value="Port_2" />
+                    <om:Property Name="MessageName" Value="v251" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_1" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="c4853bb5-8f04-41fe-bd5d-c088b9d171c1" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="34.1" HigherBound="36.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="20" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="BTAHL7Schemas.PortType_2" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_2" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="d82a6f30-d200-4382-a2fb-981ba298aa3c" ParentLink="PortDeclaration_CLRAttribute" LowerBound="34.1" HigherBound="35.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="0929fa64-b7a5-4634-82bd-da9b4f944e58" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="36.1" HigherBound="38.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="BTAHL7Schemas.PortType_3" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="f15776d8-77bd-4d35-be1e-c8d10bad631a" ParentLink="PortDeclaration_CLRAttribute" LowerBound="36.1" HigherBound="37.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module BTAHL7Schemas
+{
+    internal messagetype ORUMultiPart24
+    {
+        body ADT_A04_251_GLO_DEF BodySegments;
+        MSH_25_GLO_DEF MSHSegment;
+        System.String ZSegments;
+    };
+    internal porttype PortType_1
+    {
+        oneway Operation_1
+        {
+            ADT_A04_251_GLO_DEF
+        };
+    };
+    internal porttype PortType_2
+    {
+        oneway Operation_1
+        {
+            ORUMultiPart24
+        };
+    };
+    internal porttype PortType_3
+    {
+        oneway Operation_1
+        {
+            ADT_A04_251_GLO_DEF
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service BizTalk_Orchestration1
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses PortType_2 Port_2;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements PortType_3 Port_1;
+        message ADT_A04_251_GLO_DEF Message_251;
+        message ORUMultiPart24 v251;
+        System.String str;
+        System.Xml.XmlDocument xmldoc;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("0ab9d403-07c8-4124-bd39-43eee65112e9")]
+            activate receive (Port_1.Operation_1, Message_251);
+            str = "";
+            xmldoc = new System.Xml.XmlDocument();
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("b116a499-1da5-4192-a669-c0c541d00555")]
+            construct v251
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("4eefbc8b-972b-4a49-9f09-9a03863bc9b5")]
+                v251.BodySegments=Message_251;
+                str = @"<ns0:MSH_25_GLO_DEF xmlns:ns0='http://microsoft.com/HealthCare/HL7/2X'>
+                	<MSH>
+                		<MSH.2_EncodingCharacters>^~\&amp;</MSH.2_EncodingCharacters>
+                		<MSH.3_SendingApplication>
+                			<HD.0_NamespaceId>MyHealthCareCompany</HD.0_NamespaceId>
+                		</MSH.3_SendingApplication>
+                		<MSH.4_SendingFacility>
+                			<HD.0_NamespaceId>MyHealthCareCompany</HD.0_NamespaceId>
+                			<HD.1_UniversalId>12</HD.1_UniversalId>
+                			<HD.2_UniversalIdType>L,M,N</HD.2_UniversalIdType>
+                		</MSH.4_SendingFacility>
+                		<MSH.5_ReceivingApplication>
+                			<HD.0_NamespaceId>MyReceivingCompany</HD.0_NamespaceId>
+                		</MSH.5_ReceivingApplication>
+                		<MSH.6_ReceivingFacility>
+                			<HD.0_NamespaceId>MyReceivingCompany</HD.0_NamespaceId>
+                		</MSH.6_ReceivingFacility>
+                		<MSH.7_DateTimeOfMessage>
+                			<TS.1>20110217203656+0530</TS.1>
+                		</MSH.7_DateTimeOfMessage>
+                		<MSH.9_MessageType>
+                			<CM_MSG.0_MessageType>ORU</CM_MSG.0_MessageType>
+                			<CM_MSG.1_TriggerEvent>R01</CM_MSG.1_TriggerEvent>
+                			<CM_MSG.2_MessageStructure>ORU_R01</CM_MSG.2_MessageStructure>
+                		</MSH.9_MessageType>
+                		<MSH.10_MessageControlId>19316405-a86e-4dfe-afff-542128d80bd6</MSH.10_MessageControlId>
+                		<MSH.11_ProcessingId>
+                			<PT.0_ProcessingId>P</PT.0_ProcessingId>
+                			<PT.1_ProcessingMode>A</PT.1_ProcessingMode>
+                		</MSH.11_ProcessingId>
+                		<MSH.12_VersionId>
+                			<VID_0_VersionId>2.4</VID_0_VersionId>
+                		</MSH.12_VersionId>
+                		<MSH.13_SequenceNumber>1</MSH.13_SequenceNumber>
+                		<MSH.15_AcceptAcknowledgmentType>AL</MSH.15_AcceptAcknowledgmentType>
+                		<MSH.21_ConformanceStatementId>
+                			<EI_0_EntityIdentifier>AA</EI_0_EntityIdentifier>
+                		</MSH.21_ConformanceStatementId>
+                	</MSH>
+                </ns0:MSH_25_GLO_DEF>";
+                
+                xmldoc.LoadXml(str);
+                v251.MSHSegment = xmldoc;
+                v251.ZSegments="";
+                v251(BTAHL7Schemas.MessageClass) = "MessageClass2X";
+                
+                v251(BTAHL7Schemas.ParseError) = false;
+                v251(BTAHL7Schemas.SegmentDelimiter2Char) = true;
+                v251(BTAHL7Schemas.ZPartPresent) = false;
+                v251(BTAHL7Schemas.MessageClass) = "MessageClass2X";
+                v251(BTAHL7Schemas.MessageEncoding) = 65001;
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("cc326ac5-e246-4c0b-bb0b-07534df084fc")]
+            send (Port_2.Operation_1, v251);
+        }
+    }
+}
+
